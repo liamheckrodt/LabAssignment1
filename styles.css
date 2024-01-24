@@ -1,26 +1,27 @@
+
+
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif; /* Add a default font */
-  }
-  
-  .container {
-    text-align: center; /* Center align text in the container */
-  }
-  
-  .quiz-container {
-    max-width: 600px; /* Set a maximum width for the quiz container */
-    margin-top: 20px; /* Add some space at the top */
-  }
-  
-  .question {
-    margin-bottom: 50px; /* Add space between questions */
-  }
-  
-  .next-btn {
-    margin-top: 30px; /* Add space above the submit button */
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif; 
+}
+
+.container {
+  text-align: center; 
+}
+
+.quiz-container {
+  max-width: 600px; 
+  margin-top: 20px; 
+}
+
+.question {
+  margin-bottom: 50px; 
+}
+
+.next-btn {
+  margin-top: 30px; 
+}
