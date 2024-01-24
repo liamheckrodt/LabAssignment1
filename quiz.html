@@ -1,133 +1,125 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>interactive quiz</title>
+    <title>Interactive Quiz</title>
     <link rel="stylesheet" href="styles.css">
-	<script src="quiz.js"></script>
-  </head>
+</head>
+<body>
 
-
-   <div class="quiz-container">
+<div class="quiz-container">
     <h1>Multiple choice Quiz</h1>
     <hr>
     <form id="quiz-form">
-        <div class="d-flex">
-            <div id="question1">
-            
-        <p>1. What is the capital of France?</p>
         <div class="question" id="question1">
-        <label>
-            <input type="radio" name="q1" value="a">
-            Nice
-        </label>
-        <label>
-            <input type="radio" name="q1" value="b">
-            Lyon
-        </label>
-        <label>
-            <input type="radio" name="q1" value="c">
-            Paris<!--correct answer -->
-        </label>
-        <label>
-            <input type="radio" name="q1" value="d">
-            Marseille
-        </label>
-    </div>
-</div>
+            <p>1. What is the capital of France?</p>
+            <div class="answers">
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    Nice
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    Lyon
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Paris<!--correct answer -->
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="d">
+                    Marseille
+                </label>
+            </div>
+        </div>
 
+        <div class="question" id="question2">
+            <p>2. What is the best case Big O of quicksort?</p>
+            <div class="answers">
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    O(nlogn) <!--correct answer -->
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    O(n^2)
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    O(logn)
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="d">
+                    O(n^2)
+                </label>
+            </div>
+        </div>
 
-
-    <div class="question" id="question2">
-        <p>2. What is the best case Big O of quicksort?</p>
-        <div class="answers">
-        <label>
-            <input type="radio" name="q2" value="a">
-            O(nlogn) <!--correct answer -->
-        </label>
-        <label>
-            <input type="radio" name="q2" value="b">
-            O(n^2)
-        </label>
-        <label>
-            <input type="radio" name="q2" value="c">
-            O(logn)
-        </label>
-        <label>
-            <input type="radio" name="q2" value="d">
-            O(n^2)
-        </label>
-    </div>
-</div>
-   
-    
-   
         <div class="question" id="question3">
-        <p>3. how many hearts do octopuses  have?</p>
-    <div class="answers">
-        <label>
-            <input type="radio" name="q3" value="a">
-            8
-        </label>
-        <label>
-            <input type="radio" name="q3" value="b">
-            2
-        </label>
-        <label>
-            <input type="radio" name="q3" value="c">
-            6
-        </label>
-        <label>
-            <input type="radio" name="q3" value="d">
-            3 <!--correct answer -->
-        </label>
-    </div>
- </div>
+            <p>3. How many hearts do octopuses have?</p>
+            <div class="answers">
+                <label>
+                    <input type="radio" name="q3" value="a">
+                    8
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="b">
+                    2
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="c">
+                    6
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="d">
+                    3 <!--correct answer -->
+                </label>
+            </div>
+        </div>
 
-
-    <div class="question" id="question4">
-        <p>4. How many lives to cats have?</p>
-    <div class="answers">
-        <label>
-            <input type="radio" name="q4" value="a">
-            1 <!--correct answer -->
-        </label>
-        <label>
-            <input type="radio" name="q4" value="b">
-            6
-        </label>
-        <label>
-            <input type="radio" name="q4" value="c">
-            9 
-        </label>
-        <label>
-            <input type="radio" name="q4" value="d">
-            3
-        </label>
-    </div>
-    <button type="button" class="next-btn" onclick="submitQuiz()">Submit</button>
-
-    </div>
+        <div class="question" id="question4">
+            <p>4. How many lives do cats have?</p>
+            <div class="answers">
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    1 <!--correct answer -->
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    6
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    9
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="d">
+                    3
+                </label>
+            </div>
+            <button type="button" class="next-btn" onclick="submitQuiz()">Submit</button>
+        </div>
     </form>
     <div class="result" id="result"></div>
-   </div>
+</div>
 
-   <!--display results-->
-    <div class="result-container" style="display: none;">
+
+<div class="result-container" style="display: none;">
     <h1>Quiz Results</h1>
     <div id="result"></div>
 
- <!--display percent-->
+    
     <div class="percent-container" style="display: none;">
-        <h1>Quiz Results</h1>
+       <!-- <h1>Quiz Results</h1> -->
         <div id="percent"></div>
 
- <!--display message-->
+        
         <div class="message-container" style="display: none;">
             <h1>Good Job!</h1>
             <div id="message"></div>
-
-  </div>
+        </div>
+    </div>
 </body>
+<script src="quiz.js"></script>
 </html>
