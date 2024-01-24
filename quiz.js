@@ -21,20 +21,21 @@ function submitQuiz() {
 
   const percentContainer = document.getElementById('percent');
   const resultContainer = document.getElementById('result');
+  const messageContainer = document.getElementById('message');
 
-  let messageContainer; 
-  messageContainer = document.getElementById('message');
   if (score === 4) {
-      //messageContainer = document.getElementById('message');
-      messageContainer.innerHTML = `Good Job!`;
+      messageContainer.innerHTML = `Way to go!`;
       messageContainer.style.display = 'block';
   }
+  
 
   resultContainer.innerHTML = `You scored ${score} out of 4`;
-  percentContainer.innerHTML = `${percent}%`;
+  percentContainer.innerHTML = `${percent.toFixed(2)}%`;
 
-  document.querySelector('.quiz-container').style.display = 'none';
-  document.querySelector('.result-container').style.display = 'block';
+document.querySelector('.quiz-container').style.display = 'none';
+document.querySelector('.result-container').style.display = 'block';
+document.querySelector('.percent-container').style.display = 'block'; 
+document.querySelector('.message-container').style.display = 'block'; 
 
 }
 
